@@ -12,6 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Login Page</title>
    
 
@@ -83,6 +84,17 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
+.icon{
+     /* position: absolute;  */
+    margin-left:14rem;
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    /* line-height: -7px; */
+    margin-top: -1.7rem;
+    
+}
+
 
 button:hover {
     background-color: #0056b3;
@@ -100,12 +112,29 @@ button:hover {
             <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
+                <div class="icon">
+                    <i class="fa-solid fa-eye-slash" id="eyeicon"></i>
+                    </div>
             </div>
             <div class="input-group">
                 <button type="submit" name="login">Login</button>
             </div>
         </form>
     </div>
+    <script>
+
+let eyeicon = document.getElementById("eyeicon");
+let password = document.getElementById("password");
+
+eyeicon.onclick = function(){
+if(password.type == "password"){
+password.type = "text";
+}else{
+password.type = "password";
+}
+}
+
+</script>
 </body>
 </html>
 

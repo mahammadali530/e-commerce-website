@@ -29,6 +29,7 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="stayles.css">
 </head>
@@ -117,8 +118,9 @@ h2{
     position: absolute;
     right: 8px;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1rem;
     line-height: 57px;
+    
 }
 .remember-forgot{
     margin: -15px 0 15px;
@@ -175,6 +177,12 @@ button{
         width: 290px;
     }
 }
+/* .input-box i{
+    color: #fff;
+    margin-left:280px;
+    margin-bottom:110px;
+    
+} */
 
 
     </style>
@@ -191,9 +199,11 @@ button{
             </div>
             <div class="input-box">
                 <span class="icon">
-                    <ion-icon class="lock-closed"></ion-icon>
+                    <ion-icon class=" fa-solid fa-eye-slash" id="eyeicon"></ion-icon>
                 </span>
-                <input type="password" name="password" required>
+                <!-- <i class="fa-solid fa-eye-slash" id="eyeicon"></i> -->
+                <input type="password" name="password"  id="password" required>
+                <!-- <i class="fa-solid fa-eye-slash" id="eyeicon"></i> -->
                 <label>Password</label>
             </div>
             <div class="remember-forgot">
@@ -208,8 +218,21 @@ button{
         </form>
     </div>
 </section>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+<script>
+
+let eyeicon = document.getElementById("eyeicon");
+let password = document.getElementById("password");
+
+eyeicon.onclick = function(){
+if(password.type == "password"){
+password.type = "text";
+}else{
+password.type = "password";
+}
+}
+
+</script>
 </body>
 </html>

@@ -614,6 +614,7 @@ section{
     text-decoration:none;
     text-transform: capitalize;
     transition: .2s linear;
+    cursor: pointer;
 }
 html{
     font-size: 62.5%;
